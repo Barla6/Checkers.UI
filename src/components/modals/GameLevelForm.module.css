@@ -43,15 +43,15 @@
     margin-top: 5vh;
 }
 
-.level-easy {
+.game-level-card .game-level-card-content .level-easy {
     background-color: #82a8c3;
 }
 
-.level-medium {
+.game-level-card .game-level-card-content .level-medium {
     background-color: #6f8a9d;
 }
 
-.level-hard {
+.game-level-card .game-level-card-content .level-hard {
     background-color: #475864;
 }
 
