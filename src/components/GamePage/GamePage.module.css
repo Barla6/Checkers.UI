@@ -1,0 +1,16 @@
+.game-page {
+    background-color: #a0b3c3;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.game-page .board {
+    margin-top: 5vh;
+}
+
+.game-page .sidebar {
+}

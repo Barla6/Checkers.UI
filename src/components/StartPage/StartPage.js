@@ -4,6 +4,7 @@ import { Button } from "@mui/material";
 import GameTypeForm from "../modals/GameTypeForm";
 import { useState } from "react";
 import GameLevelForm from "../modals/GameLevelForm";
+import Board from "../GamePage/Board/Board";
 
 const StartPage = () => {
     const [gameTypeModalOpen, setGameTypeModalOpen] = useState(false);
