@@ -4,11 +4,12 @@ import { Button } from "@mui/material";
 import GameTypeForm from "../modals/GameTypeForm";
 import { useState } from "react";
 import GameLevelForm from "../modals/GameLevelForm";
-import Board from "../GamePage/Board/Board";
+import { useHistory } from "react-router-dom";
 
 const StartPage = () => {
     const [gameTypeModalOpen, setGameTypeModalOpen] = useState(false);
     const [gameLevelModalOpen, setGameLevelModalOpen] = useState(false);
+    const history = useHistory();
 
     const playHandler = () => {
         setGameTypeModalOpen(true);
@@ -31,6 +32,11 @@ const StartPage = () => {
         }
     };
 
+    const chooseGameLevelHandler = () => {
+        setGameLevelModalOpen(false);
+        history.push("/game");
+    };
+
     return (
         <div>
             <GameTypeForm
@@ -41,6 +47,7 @@ const StartPage = () => {
             <GameLevelForm
                 open={gameLevelModalOpen}
                 exitHandler={exitGameLevelModalHandler}
+                chooseGameLevelHandler={chooseGameLevelHandler}
             ></GameLevelForm>
             <div className={styles["start-page"]}>
                 <header className={styles["header"]}></header>

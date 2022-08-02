@@ -2,10 +2,11 @@ import React from "react";
 import ReactDOM from "react-dom";
 import styles from "./GameLevelForm.module.css";
 import { Card, CardContent, CardActions, Button } from "@mui/material";
+import { Link } from "react-router-dom";
 
 const GameLevelFormModal = (props) => {
     return (
-        <div>
+        <React.Fragment>
             <div className={styles.backdrop}></div>
             <Card className={styles["game-level-card"]}>
                 <CardActions className={styles["actions-container"]}>
@@ -21,12 +22,27 @@ const GameLevelFormModal = (props) => {
                     </Button>
                 </CardActions>
                 <CardContent className={styles["game-level-card-content"]}>
-                    <Button className={styles["level-easy"]}>easy</Button>
-                    <Button className={styles["level-medium"]}>medium</Button>
-                    <Button className={styles["level-hard"]}>hard</Button>
+                    <Button
+                        className={styles["level-easy"]}
+                        onClick={props.chooseGameLevelHandler}
+                    >
+                        easy
+                    </Button>
+                    <Button
+                        className={styles["level-medium"]}
+                        onClick={props.chooseGameLevelHandler}
+                    >
+                        medium
+                    </Button>
+                    <Button
+                        className={styles["level-hard"]}
+                        onClick={props.chooseGameLevelHandler}
+                    >
+                        hard
+                    </Button>
                 </CardContent>
             </Card>
-        </div>
+        </React.Fragment>
     );
 };
 
@@ -37,7 +53,7 @@ const GameLevelForm = (props) => {
                 ReactDOM.createPortal(
                     <GameLevelFormModal
                         exitHandler={props.exitHandler}
-                        choseGameTypeHanlder={props.choseGameTypeHanlder}
+                        chooseGameLevelHandler={props.chooseGameLevelHandler}
                     ></GameLevelFormModal>,
                     document.getElementById("overlay-root")
                 )}
