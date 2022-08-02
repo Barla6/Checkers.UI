@@ -5,7 +5,7 @@ import { Card, CardContent, CardActions, Button } from "@mui/material";
 
 const GameTypeFormModal = (props) => {
     return (
-        <div>
+        <React.Fragment>
             <div className={styles.backdrop}></div>
             <Card className={styles["game-type-card"]}>
                 <CardActions className={styles["actions-container"]}>
@@ -48,13 +48,13 @@ const GameTypeFormModal = (props) => {
                     </Button>
                 </CardContent>
             </Card>
-        </div>
+        </React.Fragment>
     );
 };
 
 const GameTypeForm = (props) => {
     return (
-        <div>
+        <React.Fragment>
             {props.open &&
                 ReactDOM.createPortal(
                     <GameTypeFormModal
@@ -63,7 +63,7 @@ const GameTypeForm = (props) => {
                     ></GameTypeFormModal>,
                     document.getElementById("overlay-root")
                 )}
-        </div>
+        </React.Fragment>
     );
 };
 

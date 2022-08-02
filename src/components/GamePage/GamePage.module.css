@@ -7,10 +7,3 @@
     flex-direction: row;
     justify-content: space-evenly;
 }
-
-.game-page .board {
-    margin-top: 5vh;
-}
-
-.game-page .sidebar {
-}

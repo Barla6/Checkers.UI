@@ -6,6 +6,7 @@ import styles from "./GamePage.module.css";
 const GamePage = (props) => {
     return (
         <div className={styles["game-page"]}>
+            <SideBar className={styles["sidebar"]}></SideBar>
             <Board className={styles["board"]}></Board>
             <SideBar className={styles["sidebar"]}></SideBar>
         </div>

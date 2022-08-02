@@ -1,12 +1,19 @@
 import "./App.css";
 import StartPage from "./components/StartPage/StartPage";
-import Board from "./components/GamePage/Board/Board";
+import { Route, Switch } from "react-router-dom";
 import GamePage from "./components/GamePage/GamePage";
 
 function App() {
     return (
         <div className="App">
-            <GamePage></GamePage>
+            <Switch>
+                <Route path="/" exact>
+                    <StartPage />
+                </Route>
+                <Route path="/game" exact>
+                    <GamePage />
+                </Route>
+            </Switch>
         </div>
     );
 }
