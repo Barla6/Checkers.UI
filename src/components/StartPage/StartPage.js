@@ -1,10 +1,11 @@
 import React from "react";
 import styles from "./StartPage.module.css";
-import { Button } from "@mui/material";
+import { Button, Grid } from "@mui/material";
 import GameTypeForm from "../modals/GameTypeForm";
 import { useState } from "react";
 import GameLevelForm from "../modals/GameLevelForm";
 import { useHistory } from "react-router-dom";
+import { createNewGame } from "../../API";
 
 const StartPage = () => {
     const [gameTypeModalOpen, setGameTypeModalOpen] = useState(false);
@@ -32,9 +33,12 @@ const StartPage = () => {
         }
     };
 
-    const chooseGameLevelHandler = () => {
+    const chooseGameLevelHandler = (event) => {
         setGameLevelModalOpen(false);
         history.push("/game");
+
+        const level = event.target.name;
+        createNewGame(level);
     };
 
     return (
@@ -50,12 +54,19 @@ const StartPage = () => {
                 chooseGameLevelHandler={chooseGameLevelHandler}
             ></GameLevelForm>
             <div className={styles["start-page"]}>
-                <header className={styles["header"]}></header>
-                <div className={styles["bottom-div"]}>
-                    <Button variant="contained" onClick={playHandler}>
-                        Play
-                    </Button>
-                </div>
+                <img
+                    className={styles["header-image"]}
+                    src={require("../../assets/header.png")}
+                    alt="header img"
+                ></img>
+                <h1 className={styles["title"]}>CHECKERS</h1>
+                <Button
+                    className={styles["play-button"]}
+                    variant="contained"
+                    onClick={playHandler}
+                >
+                    Play
+                </Button>
             </div>
         </div>
     );

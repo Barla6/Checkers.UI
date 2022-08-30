@@ -1,30 +1,43 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Sigmar+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lilita+One&display=swap");
 
 .start-page {
-    min-height: 100vh;
-    min-width: 100vw;
-    display: flex;
-    flex-direction: column;
-}
-
-.start-page .header {
-    background-color: #6f8a9d;
+    position: fixed;
+    height: 100%;
     width: 100%;
-    flex: 2;
+    background-color: #a0b3c3;
 }
 
-.start-page .bottom-div {
-    width: 100%;
-    flex: 1;
-}
-
-.start-page .bottom-div Button {
+.start-page .play-button {
     width: fit-content;
     height: fit-content;
-    margin-top: 8vh;
-    background-color: #6f8a9d;
-    font-size: 6vh;
-    color: black;
+    border-radius: 1rem;
+    background-color: white;
+    font-size: 8vh;
+    color: #59646d;
     font-weight: 600;
-    font-family: "Nunito", sans-serif;
+    font-family: "Lilita One", cursive;
+    position: fixed;
+    left: 50%;
+    top: 70%;
+    transform: translate(-50%, 0%);
+}
+
+.start-page .title {
+    margin: 0;
+    color: white;
+    font-size: 24vh;
+    font-family: "Lilita One", cursive;
+    letter-spacing: 2vh;
+    position: fixed;
+    left: 50%;
+    top: 20%;
+    transform: translate(-50%, 0%);
+    text-shadow: 0 0 2vh black;
+}
+
+.start-page .header-image {
+    width: 100%;
+    opacity: 0.5;
 }
