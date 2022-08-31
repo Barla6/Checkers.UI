@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Sigmar+One&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lilita+One&display=swap");
 
 .start-page {
@@ -10,6 +8,10 @@
 }
 
 .start-page .play-button {
+    position: fixed;
+    left: 50%;
+    top: 70%;
+    transform: translate(-50%, 0%);
     width: fit-content;
     height: fit-content;
     border-radius: 1rem;
@@ -18,23 +20,19 @@
     color: #59646d;
     font-weight: 600;
     font-family: "Lilita One", cursive;
-    position: fixed;
-    left: 50%;
-    top: 70%;
-    transform: translate(-50%, 0%);
 }
 
 .start-page .title {
-    margin: 0;
-    color: white;
-    font-size: 24vh;
-    font-family: "Lilita One", cursive;
-    letter-spacing: 2vh;
     position: fixed;
     left: 50%;
     top: 20%;
     transform: translate(-50%, 0%);
+    margin: 0;
     text-shadow: 0 0 2vh black;
+    color: white;
+    font-size: 13vw;
+    font-family: "Lilita One", cursive;
+    letter-spacing: 2vh;
 }
 
 .start-page .header-image {
